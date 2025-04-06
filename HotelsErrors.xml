@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotels>
+  <!-- Error 1: Invalid attribute value (id cannot have spaces) -->
+  <Hotel id="hotel 1" Rating="4.5">
+    <Name>Hyatt Regency</Name>
+    <Phone>555-123-4567</Phone>
+    <Address>
+      <Number>200</Number>
+      <Street>Broadway Ave</Street>
+      <City>New York</City>
+      <State>NY</State>
+      <Zip>10007</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- Error 2: Missing required element (Address) -->
+  <Hotel id="hotel2">
+    <Name>Marriott Downtown</Name>
+    <Phone>555-987-6543</Phone>
+  </Hotel>
+
+  <!-- Error 3: Incorrect element order (Address before Phone) -->
+  <Hotel id="hotel3">
+    <Name>Hilton Garden Inn</Name>
+    <Address>
+      <Number>300</Number>
+      <Street>Park Lane</Street>
+      <City>Dallas</City>
+      <State>TX</State>
+      <Zip>75201</Zip>
+    </Address>
+    <Phone>555-333-7777</Phone>
+  </Hotel>
+  
+  <!-- Error 4: Invalid child element (Rating should be an attribute) -->
+  <Hotel id="hotel4">
+    <Name>Four Seasons</Name>
+    <Phone>555-444-8888</Phone>
+    <Rating>5.0</Rating>
+    <Address>
+      <Number>400</Number>
+      <Street>Ocean Drive</Street>
+      <City>Miami</City>
+      <State>FL</State>
+      <Zip>33139</Zip>
+    </Address>
+  </Hotel>
+  
+  <!-- Error 5: Unescaped special characters -->
+  <Hotel id="hotel5" Rating="3.5">
+    <Name>Holiday Inn & Suites</Name>
+    <Phone>555-555-9999</Phone>
+    <Address>
+      <Number>500</Number>
+      <Street>Mountain Rd</Street>
+      <City>Denver</City>
+      <State>CO</State>
+      <Zip>80202</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- Error 6: Invalid type (Rating should be numeric) -->
+  <Hotel id="hotel6" Rating="excellent">
+    <Name>Sheraton</Name>
+    <Phone>555-666-0000</Phone>
+    <Address>
+      <Number>600</Number>
+      <Street>Harbor Blvd</Street>
+      <City>San Diego</City>
+      <State>CA</State>
+      <Zip>92101</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- Error 7: Misspelled element name (Addres instead of Address) -->
+  <Hotel id="hotel7">
+    <Name>Westin</Name>
+    <Phone>555-777-1111</Phone>
+    <Addres>
+      <Number>700</Number>
+      <Street>River Road</Street>
+      <City>Chicago</City>
+      <State>IL</State>
+      <Zip>60601</Zip>
+    </Addres>
+  </Hotel>
+
+  <!-- Error 8: Invalid attribute on Address -->
+  <Hotel id="hotel8">
+    <Name>Radisson Blu</Name>
+    <Phone>555-888-2222</Phone>
+    <Address Location="Downtown">
+      <Number>800</Number>
+      <Street>Union Square</Street>
+      <City>San Francisco</City>
+      <State>CA</State>
+      <Zip>94108</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- Error 9: Missing required element inside Address -->
+  <Hotel id="hotel9">
+    <Name>Crowne Plaza</Name>
+    <Phone>555-999-3333</Phone>
+    <Address>
+      <Number>900</Number>
+      <Street>Liberty Ave</Street>
+      <City>Seattle</City>
+      <!-- Missing State element -->
+      <Zip>98101</Zip>
+    </Address>
+  </Hotel>
+</Hotels>
